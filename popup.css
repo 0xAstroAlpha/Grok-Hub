@@ -1,20 +1,20 @@
 /* Grok-Hub popup — gradient green theme. Fonts: Inter + Outfit. */
 
 :root {
-  --bg: #0B1121;
-  --panel: #131A2B;
-  --panel-2: #1E293B;
-  --border: #334155;
-  --border-soft: #1E293B;
-  --text: #F8FAFC;
-  --muted: #94A3B8;
-  --faint: #64748B;
-  --accent: #10B981; /* Emerald 500 */
-  --accent-strong: #059669; /* Emerald 600 */
-  --accent-ink: #FFFFFF;
-  --ok: #34D399;
-  --danger: #EF4444;
-  --radius: 12px;
+  --bg: #000000;
+  --panel: #0A0A0A;
+  --panel-2: #161616;
+  --border: #2F3336;
+  --border-soft: #16181C;
+  --text: #E7E9EA;
+  --muted: #71767B;
+  --faint: #536471;
+  --accent: #00B0FF; /* Electric Blue */
+  --accent-strong: #0091EA; 
+  --accent-ink: #000000;
+  --ok: #00E5FF;
+  --danger: #F4212E;
+  --radius: 8px;
 }
 
 * { box-sizing: border-box; margin: 0; }
@@ -40,7 +40,7 @@ body {
   position: fixed;
   inset: -40% -20% auto -20%;
   height: 280px;
-  background: radial-gradient(60% 100% at 50% 0%, rgba(16, 185, 129, 0.15), transparent 70%);
+  background: radial-gradient(60% 100% at 50% 0%, rgba(0, 176, 255, 0.12), transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -74,7 +74,7 @@ body > *:not(.glow) { position: relative; z-index: 1; }
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  background: linear-gradient(to right, #34D399, #10B981);
+  background: linear-gradient(to right, #FFFFFF, #00B0FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -122,7 +122,7 @@ body > *:not(.glow) { position: relative; z-index: 1; }
 .tab.is-active {
   color: var(--accent-ink);
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 176, 255, 0.3);
 }
 
 .panel { display: none; flex: 1; min-height: 0; }
@@ -176,7 +176,7 @@ textarea:focus {
   outline: none;
   border-color: var(--accent);
   background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 0 4px rgba(0, 176, 255, 0.15);
 }
 
 .toolbar { display: flex; gap: 10px; margin-top: 14px; }
@@ -200,9 +200,9 @@ textarea:focus {
 .btn--primary {
   color: var(--accent-ink);
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 176, 255, 0.3);
 }
-.btn--primary:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4); }
+.btn--primary:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0, 176, 255, 0.4); }
 .btn--ghost {
   color: var(--text);
   background: var(--panel-2);
@@ -233,8 +233,8 @@ textarea:focus {
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 .acct.active {
-  background: linear-gradient(100deg, rgba(16, 185, 129, 0.08), rgba(30, 41, 59, 0.4) 70%);
-  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(100deg, rgba(0, 176, 255, 0.06), rgba(22, 22, 22, 0.4) 70%);
+  border-color: rgba(0, 176, 255, 0.3);
 }
 .acct.active::before {
   content: "";
@@ -292,8 +292,8 @@ textarea:focus {
   padding: 3px 8px;
   border-radius: 6px;
   color: var(--accent);
-  background: rgba(16, 185, 129, 0.15);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(0, 176, 255, 0.1);
+  border: 1px solid rgba(0, 176, 255, 0.2);
   text-transform: uppercase;
 }
 
@@ -333,7 +333,7 @@ textarea:focus {
   color: var(--accent-ink);
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 176, 255, 0.3);
 }
 .switch:disabled { cursor: default; opacity: 0.7; }
 .switch.is-busy { color: var(--accent); }
@@ -360,15 +360,15 @@ textarea:focus {
   font-size: 13px;
   font-weight: 500;
   border-radius: 10px;
-  color: var(--bg);
+  color: #000000;
   background: var(--ok);
-  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.3);
   animation: toast-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .toast.error {
-  color: var(--bg);
+  color: #FFFFFF;
   background: var(--danger);
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 4px 12px rgba(244, 33, 46, 0.3);
 }
 @keyframes toast-in { from { opacity: 0; transform: translateY(10px) scale(0.98); } }
 
