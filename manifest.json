@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Grok-Hub",
+  "version": "1.0.0",
+  "description": "Hub for managing Grok accounts.",
+  "permissions": ["storage", "cookies", "tabs", "debugger"],
+  "host_permissions": ["*://*.x.ai/*", "*://*.grok.com/*"],
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Grok-Hub",
+    "default_icon": "icon16.png"
+  }
+}
